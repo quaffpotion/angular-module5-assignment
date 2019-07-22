@@ -1,0 +1,2 @@
+npm install --save bootstrap@3
+May need to re-run ng serve after adding bootstrap.css to styles in angular.json
