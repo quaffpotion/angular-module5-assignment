@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-even-tracker',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./even-tracker.component.css']
 })
 export class EvenTrackerComponent implements OnInit {
+
+  @Input() value: number
 
   constructor() { }
 

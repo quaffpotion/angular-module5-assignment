@@ -20,7 +20,6 @@ export class GameControlComponent implements OnInit {
   onStart() {
     if (!this.running) {
       this.running = true
-      this.time = 0
       this.clock = setInterval(
         () => {
           this.time = this.time + 1; console.log(this.time); this.timeEmitter.emit(this.time) 
@@ -35,11 +34,6 @@ export class GameControlComponent implements OnInit {
   onStop() {
     clearInterval(this.clock)
     this.running = false
-  }
-
-  incrementTime() {
-    this.time = this.time + 1
-    console.log(this.time)
   }
 
 }

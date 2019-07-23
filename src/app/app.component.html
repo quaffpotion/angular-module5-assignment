@@ -2,7 +2,10 @@
   <div class="row">
     <div class="col-md-12">
       <app-game-control (timeEmitter)="onTimeEmitted($event)"></app-game-control>
-      <div *ngFor="let x of mylist">{{ x }}</div>
+      <div *ngFor="let x of mylist">
+        <app-odd-tracker *ngIf="x % 2 == 1">{{ x }}</app-odd-tracker>
+        <app-even-tracker [value]="x" *ngIf="x % 2 == 0"></app-even-tracker>
+      </div>
     </div>
   </div>
 </div>
